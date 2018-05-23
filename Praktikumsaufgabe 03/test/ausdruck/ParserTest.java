@@ -357,12 +357,6 @@ public class ParserTest {
         //Neue Variable j für den Test.
         Variable j = new Variable("j");
         //Aufbau des neuen Ausdrucks.
-        
-        
-        /*Realisieren:
-        OP(OP(Konstante: 1 + OP(OP(Konstante: 2 * 
-        OP(OP(i + OP(Konstante: 2 * k)) - Konstante: 1)) / Konstante: 2)) + j)
-        */
         sollAusdruck =
         new Operatorausdruck(
                 new Operatorausdruck(
