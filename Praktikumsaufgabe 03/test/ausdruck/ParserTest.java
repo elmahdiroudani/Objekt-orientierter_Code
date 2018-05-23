@@ -416,33 +416,4 @@ public class ParserTest {
             fail(ex.getMessage());
         }
     }
-    /**
-     * Testet die Methode {@link Parser#parse(java.lang.String)}.
-     */
-    @Test
-    public void testParse14() {
-        term = "(a + 1) * xy - 37";
-        /**
-         * Test 14
-         * Getestet wird das „Parsen“ des
-         * Strings: "(a + 1) * xy - 37"
-         * mit der Belegung: a=3.
-         */
-        Ausdruck sollAusdruck;
-        //Neue Variable i für den Test.
-        Variable a = new Variable("a");
-        Variable xy = new Variable("xy");
-        Konstante konst1 = new Konstante(37);
-        //Aufbau des neuen Ausdrucks.
-        sollAusdruck = new Operatorausdruck(
-                new Operatorausdruck(
-                        new Operatorausdruck(a, '+', new Konstante(1)), 
-                        '*', xy), '-', konst1);
-        //Sollergebnis: -17
-        try {
-            assertEquals(sollAusdruck, parser.parse(term));
-        } catch (ParseException ex) {
-            fail(ex.getMessage());
-        }
-    }
 }
