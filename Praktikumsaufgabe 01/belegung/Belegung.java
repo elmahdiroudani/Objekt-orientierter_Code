@@ -1,5 +1,5 @@
 package belegung;
-import java.util.LinkedList;
+import java.util.ArrayList;
 /**
  * Diese Klasse generiert alle möglichen Permutationsbelegungen 
  * der Buchstaben a bis j.
@@ -24,7 +24,7 @@ public class Belegung {
     /**
      * Alle Permutationen die vom übergebenen Array Werte erstellt werden.
      */
-    private LinkedList<int[]> permutationen;
+    private ArrayList<int[]> permutationen;
     /**
      * "Iterator" für die Permutationen.
      */
@@ -33,11 +33,11 @@ public class Belegung {
      * Erzeugt ein Objekt für Permutationsbelegungen.
      * @param groesse Die Größe mit der das Array erzeugt wird.
      */
-    public Belegung(int groesse) {
+    public Belegung(final int groesse) {
         //Iteriert über die Permutationen, während sie erzeugt werden.
         index = 0;
         //Speichert alle Permutationen
-        this.permutationen = new LinkedList();
+        this.permutationen = new ArrayList();
         //Legt ein neues Array für die vom Benutzer fest definierte Größe an.
         werte = new int[groesse];
         for (int i = 0; i < werte.length; i++) {
