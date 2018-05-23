@@ -22,8 +22,6 @@ public class ParserTest {
      * Notwendig für die Wertzuweisung an eine Variable.
      */
     private Variablenbelegung belegung;
-    //Soll später besser werden...
-    String opTestausgabe;
     /**
      * Testdaten aufbauen.
      */
