@@ -416,7 +416,6 @@ public class ParserTest {
             fail(ex.getMessage());
         }
     }
-    //Fällt erst mal raus: a * g(f(2), f(a - 1) + 2)
     /**
      * Testet die Methode {@link Parser#parse(java.lang.String)}.
      */
