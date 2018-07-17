@@ -1,5 +1,5 @@
 package ausdruck;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 /**
  * Eine, auf JUnit 4.12 basierende, Testklasse für Tests
