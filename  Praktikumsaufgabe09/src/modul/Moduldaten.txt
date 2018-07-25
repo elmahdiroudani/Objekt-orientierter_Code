@@ -1,0 +1,3 @@
+TGI;Technische Grundlagen der Informatik
+DSG;Design-Grundlagen
+TEN-MI;Technisches Englisch für Medieninformatiker
