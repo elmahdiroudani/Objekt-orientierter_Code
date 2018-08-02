@@ -36,36 +36,8 @@ public class Fahrzeugmanager {
      * @param standort Der Standort des Fahrzeugs, an dem es sich befindet.
      */
     public void fuegeFahrzeugHinzu(String fahrzeugname, String standort) {
-        //Das aktuelle Fahrzeug.
-        Fahrzeug fahrzeug = new Fahrzeug(fahrzeugname, standort);
-        /*
-        Ist die Liste zu anfang noch leer
-        wird der Fahrzeugliste ein neues Fahrzeug mit einem Namen
-        und Standort hinzugefügt.
-        */
-        if (fahrzeuge.isEmpty()) {
-            fahrzeuge.put(fahrzeugname, fahrzeug);
-        } else {
-            //Wenn wahr, ist das Fahrzeug nicht in der Liste enthalten.
-            boolean nichtVerfuegbar = true;
-            /*
-            Im Falle, dass die Liste nicht leer ist,
-            wird einmal komplett über sie iteriert.
-            Ist das Fahrzeug doch enthalten, wird der Indikator negiert.
-            */
-            Iterator<String> fahrzeugIterator = fahrzeuge.keySet().iterator();
-            while (fahrzeugIterator.hasNext()) {
-                if (fahrzeugname.equals(fahrzeugIterator.next())) {
-                    nichtVerfuegbar = false;
-                }
-            }
-            /*
-            Ist das Fahrzeug nicht in der Liste enthalten
-            wird es der Fahrzeug-Liste neu hinzugefügt.
-            */
-            if (nichtVerfuegbar) {
-                fahrzeuge.put(fahrzeugname, fahrzeug);
-            }
+        if (!fahrzeuge.containsKey(fahrzeugname)) {
+            fahrzeuge.put(fahrzeugname, new Fahrzeug(fahrzeugname, standort));
         }
     }
     /**
